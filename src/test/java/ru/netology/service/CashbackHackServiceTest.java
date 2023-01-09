@@ -16,6 +16,16 @@ public class CashbackHackServiceTest {
     }
 
     @Test
+    public void ifRemainLessThenAmount() {
+        CashbackHackService service = new CashbackHackService();
+
+        int expected = 200;
+        int actual = service.remain(800);
+
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
     public void ifRemainZero() {
         CashbackHackService service = new CashbackHackService();
 
